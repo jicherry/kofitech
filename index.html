@@ -4,20 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>kofitech</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <div class="main">
-    <header>
-      <div>
-        <a href="#"><img src="img/logo.png" alt="로고이미지"></a>
-        <a href="#"><img src="img/h-logo.png" alt="로고이미지"></a>
+  <div class="container">
+    <header class="main-header">
+      <div class="header-inner">
+        <div class="logo">
+          <a href="index.html">
+            <img class="logo-default" src="img/logo.png" alt="로고">
+            <img class="logo-hover" src="img/h-logo.png" alt="로고 호버">
+          </a>
+        </div>
+        <nav class="main-menu">
+          <ul>
+            <li><a href="#s">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </div>
-      <div><i></i></div>
-    </header>
-    <section>
-      <video src="img/section00_slider_bg_04.mp4" autoplay="" loop="" muted="" playsinline="" poster="./images/section00_slider_bg_04.png"></video>
+      <div class="bg-line"></div>
+    </header>   
+    <section id="section01">
+      <video src="img/section01_video.mp4" autoplay="" loop="" muted="" playsinline="" poster="./img/section01_bg.png"></video>
+      <div class="main-text-box">
+        <h1>함께 성장하는 우리</h1>
+        <p>행복한 일터에서 풍요로운 미래를 꿈꿉니다.</p>
+      </div>
     </section>
-  <script src="main.js" defer></script>  
+  </div>
+
+   
+
+  
+
+
+
+
+
+
+<script src="main.js" defer></script>  
 </body>
 </html>
