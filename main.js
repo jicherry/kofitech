@@ -1,14 +1,15 @@
-const menuBtn = document.querySelector('.menu-btn');
-const mainMenu = document.querySelector('.main-menu');
-const header = document.querySelector('.main-header');
+let menuBtn = document.querySelector('.menu-btn');
+let header = document.querySelector('.header-wrap');
+let mainMenu = document.querySelector('.menu-wrap');
 
 menuBtn.addEventListener('click', () => {
-  mainMenu.classList.toggle('active');
-  header.classList.toggle('is-open');
+  menuBtn.classList.toggle('turn');
+  header.classList.toggle('unfold');
+  mainMenu.classList.toggle('unfold');
 });
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 200) {
+  if (window.scrollY > 180) {
     header.classList.add('scroll');
   } else {
     header.classList.remove('scroll');

@@ -4,17 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>kofitech</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
   <link rel="stylesheet" href="main.css">
+  <script src="main.js" defer></script>
 </head>
 <body>
   <div class="container">
-    <header class="main-header">
-      <div class="header-inner">
+    <header class="header-wrap">
+      <div class="header-item">
         <div class="logo">
-          <a href="index.html">
-            <img class="logo-default" src="img/logo.png" alt="로고">
-            <img class="logo-hover" src="img/h-logo.png" alt="로고 호버">
+          <a href="#">
+            <img class="logo-img" src="img/logo-img.png" alt="로고">
+          </a>
+          <a href="#">
+            <img class="h-logo-img" src="img/h-logo.png" alt="호버 로고">
           </a>
         </div>
         <div class="menu-btn">
@@ -23,86 +25,65 @@
           <span></span>
         </div>
       </div>
-      <div class="bg-line"></div>
-    </header>   
-    <div class="main-menu">
-      <div class="wrap-menu">
-        <div class="inner">
-          <a href=""><h3>Company</h3></a>
+    <div class="bg-line"></div>
+    </header>
+    <div class="menu-wrap">
+      <div class="mian-menu">
+        <div class="inner-menu">
+          <a href=""><h2>Company</h2></a>
           <ul>
-            <li><a href="#">회사소개</a></li>
-            <li><a href="#">글로벌 파트너사</a></li>
-            <li><a href="#">공장소개</a></li>
-            <li><a href="#">위치안내</a></li>
+            <li><a href="">회사소개</a></li>
+            <li><a href="">글로벌 파트너사 (Roquette Freres)</a></li>
+            <li><a href="">공장소개</a></li>
+            <li><a href="">위치안내</a></li>
           </ul>
         </div>
-        <div class="inner">
-          <a href=""><h3>R&D</h3></a>
+        <div class="inner-menu">
+          <a href=""><h2>R&D</h2></a>
           <ul>
-            <li><a href="#">연구소소개</a></li>
-            <li><a href="#">Brand 소개</a></li>
-            <li><a href="#">특허소개</a></li>
+            <li><a href="">연구소소개</a></li>
+            <li><a href="">Brand 소개</a></li>
+            <li><a href="">특허소개</a></li>
           </ul>
         </div>
-        <div class="inner">
-          <a href=""><h3>Tabshield®</h3></a>
+        <div class="inner-menu">
+          <a href=""><h2>Tabshield®</h2></a>
           <ul>
-            <li><a href="#">의약품</a></li>
-            <li><a href="#">건강기능식품</a></li>
+            <li><a href="">의약품</a></li>
+            <li><a href="">건강기능식품</a></li>
           </ul>
         </div>
-        <div class="inner">
-          <a href=""><h3>PR</h3></a>
+        <div class="inner-menu">
+          <a href=""><h2>PR</h2></a>
           <ul>
-            <li><a href="#">공지사항</a></li>
-            <li><a href="#">보도자료</a></li>
+            <li><a href="">공지사항</a></li>
+            <li><a href="">보도자료</a></li>
+            <li><a href="">자주하는질문</a></li>
           </ul>
         </div>
       </div>
     </div>
-    <section id="section01">
-      <video src="img/section01_video.mp4" autoplay="" loop="" muted="" playsinline="" poster="./img/section01_bg.png"></video>
-      <div class="section01-textbox">
-        <h1>함께 성장하는 우리</h1>
-        <p>행복한 일터에서 풍요로운 미래를 꿈꿉니다.</p>
+    <section class="section1">
+      <div class="section-wrap">
+        <video src="img/section1-viedo.mp4"
+        autoplay="" muted="" loop="" playsinline="" preload="auto" poster="img/section1-poster.png"></video>
       </div>
     </section>
-    <section id="section02">
-      <div class="section02-wrap">
-        <div class="section02-left">
-          <img src="img/section02_left_bg.png">
-          <div>
-            <p>Pharmaceutical film coating
-              Ready-to-use.</p>
-            <p>Tabshield® <span>의약품</span></p>
-            <p>Tabshield® H</p>
-            <p>Tabshield® P</p>
-            <p>Tabshield® E</p>
-            <p>Tabshield® customized</p>
-          </div>
+    <section class="section2">
+      <div class="section2-wrap">
+        <div class="section2-left">
+          <img src="img/section2-left-bg.png" alt="왼쪽 이미지">
+          <div class="overlay"></div>
         </div>
-        <div class="section02-right">
-          <img src="img/section02_right_bg.png">
-          <div>
-            <p>Nutraceutical film coating
-              Ready-to-use.</p>
-            <p>Tabshield®<span>건강기능식품</span></p>
-            <p>Tabshield® H</p>
-            <p>Tabshield® P</p>
-            <p>Tabshield® E</p>
-            <p>Tabshield® customized</p>
-          </div>
+        <div class="section2-right">
+          <img src="img/section2-right-bg.png" alt="오른쪽 이미지">
+          <div class="overlay"></div>
         </div>
       </div>
     </section>
-    <section id="section03">
-      <h1>Tabshield® <sapn>Products</sapn></h1>
-      <p>순수 국내 기술로 완성된 혁신적인 필름 코팅 시스템.</p>
-      <p>효율과 생산성을 한 차원 높이는 최적의 솔루션을 제안합니다.</p>
+    <section class="section3">
+      
     </section>
   </div>
-
-
-<script src="main.js" defer></script>  
 </body>
 </html>
