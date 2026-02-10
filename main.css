@@ -226,6 +226,7 @@ a {
 .overlay {
   position: absolute;
   inset: 0;
+  z-index: 10;
 }
 
 .section2-left:hover .overlay,
@@ -233,3 +234,87 @@ a {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+.section2-text-box {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 1rem;
+  z-index: 20;
+}
+
+.section2-text-box.right-text {
+  right: 60px;      
+  text-align: right;
+}
+
+.section2-text-box h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.section2-h3 a {
+  color: var(--point-color);
+  display: block;
+  padding: 1.2rem 0;
+}
+
+.section2-h3.right-h3 a {
+  color: #ffc002;
+}
+
+.section2-h3 span {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.section2-list {
+  width: 13rem;
+}
+
+.section2-list.right-list {
+  margin-left: auto;  
+}
+
+.section2-list li a {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section2-list li a {
+  color: var(--main-color);
+  font-size: 0.8rem;
+  border-bottom: 1px solid #c5c5c5;
+  width: 100%;
+  padding: 0.9rem 0;
+}
+
+.section2-list li a:nth-of-type(1) {
+  border-top: 1px solid #c5c5c5;
+}
+
+.li-arrow img {
+  object-fit: contain;
+}
+
+.plus-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--point-color);
+  display: none;
+  width: 3.5rem;
+  z-index: 10;
+}
+
+.plus-btn.right-btn {
+  left: 0;
+  background-color: #ffc002;
+}
+
+.section2-left:hover .plus-btn,
+.section2-right:hover .right-btn {
+  display: block;
+}
