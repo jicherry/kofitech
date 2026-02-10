@@ -15,3 +15,30 @@ window.addEventListener('scroll', () => {
     header.classList.remove('scroll');
   }
 });
+
+const section2 = document.querySelector('.section2');
+const textBoxes = document.querySelectorAll('.section2-text-box');
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+        textBoxes.forEach(box => {
+          box.classList.add('active');
+        });
+
+      } else {
+        textBoxes.forEach(box => {
+          box.classList.remove('active');
+        });
+      }
+
+    });
+  },
+  {
+    threshold: 0.4,
+  }
+);
+
+observer.observe(section2);
