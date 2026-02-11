@@ -199,7 +199,7 @@ a {
   position: absolute;
   color: var(--main-color);
   top: 30%;
-  left: 30px;
+  left: 50px;
   text-shadow: 0 5px 15px rgba(0,0,0,0.9);
   opacity: 0;
   transform: translateY(20px);
