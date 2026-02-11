@@ -171,11 +171,11 @@ a {
   font-weight: 500;
   color: #2c2c2c;
   border-bottom: 1px solid #c5c5c5;
+  transition: color .2s ease;
 }
 
 .inner-menu ul li a:hover {
   color: var(--point-color);
-  transition: all .2s ease;
 }
 
 .section1 {
@@ -193,6 +193,37 @@ a {
   position: absolute;
   inset: 0;
   object-fit: cover;
+}
+
+.section1-text1 {
+  position: absolute;
+  color: var(--main-color);
+  top: 30%;
+  left: 30px;
+  text-shadow: 0 5px 15px rgba(0,0,0,0.9);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.section1-text1.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section1-text1.text2 {
+  /* display: none; */
+}
+
+.section1-text-box h2 {
+  font-weight: 700;
+  font-size: 3.9rem;
+  line-height: 6rem;
+}
+
+.section1-text-box p {
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 .section2 {
@@ -345,4 +376,9 @@ a {
 .section2-left:hover .plus-btn,
 .section2-right:hover .right-btn {
   display: block;
+}
+
+.section3 {
+  background-image: url(img/section3-bg.png);
+  height: 100vh;
 }

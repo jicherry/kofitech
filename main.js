@@ -16,10 +16,11 @@ window.addEventListener('scroll', () => {
   }
 });
 
-const section2 = document.querySelector('.section2');
-const textBoxes = document.querySelectorAll('.section2-text-box');
+let section2 = document.querySelector('.section2');
+let textBoxes = document.querySelectorAll('.section2-text-box');
 
-const observer = new IntersectionObserver(
+//다시
+let observer = new IntersectionObserver(
   (entries) => {
     entries.forEach(entry => {
 
@@ -42,3 +43,40 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(section2);
+
+
+//
+document.addEventListener("DOMContentLoaded", () => {
+
+  const texts = document.querySelectorAll(".section1-text1");
+
+  let current = 0;
+
+  function cycle() {
+
+    // 현재 보이기
+    texts[current].classList.add("show");
+
+    // 3초 유지
+    setTimeout(() => {
+
+      // 숨기기
+      texts[current].classList.remove("show");
+
+      // 다음으로 이동
+      current++;
+
+      if (current >= texts.length) {
+        current = 0;
+      }
+
+      // 사라진 후 다음 시작 (1초 대기)
+      setTimeout(cycle, 1000);
+
+    }, 3000);
+  }
+
+  cycle();
+
+});
+
