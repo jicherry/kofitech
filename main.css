@@ -27,10 +27,10 @@ a {
   top: 0;
   width: 100%;
   z-index: 1000;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
-.header-wrap.unfold, 
+.header-wrap.unfold,
 .header-wrap.scroll {
   background-color: var(--main-color);
 }
@@ -40,7 +40,7 @@ a {
   opacity: 1;
 }
 
-.header-wrap.unfold span, 
+.header-wrap.unfold span,
 .header-wrap.scroll span {
   background-color: var(--text-color);
 }
@@ -81,7 +81,7 @@ a {
   width: 1.5rem;
   height: 1rem;
   cursor: pointer;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   position: relative;
 }
 
@@ -107,7 +107,7 @@ a {
   top: 13.5px;
 }
 
-.header-wrap:hover .menu-btn span{
+.header-wrap:hover .menu-btn span {
   background-color: var(--text-color);
 }
 
@@ -137,9 +137,9 @@ a {
   background-color: var(--main-color);
   z-index: 1100;
   opacity: 0;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   pointer-events: none;
-}  
+}
 
 .menu-wrap.unfold {
   opacity: 1;
@@ -171,7 +171,7 @@ a {
   font-weight: 500;
   color: #2c2c2c;
   border-bottom: 1px solid #c5c5c5;
-  transition: color .2s ease;
+  transition: color 0.2s ease;
 }
 
 .inner-menu ul li a:hover {
@@ -193,6 +193,8 @@ a {
   position: absolute;
   inset: 0;
   object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .section1-text1 {
@@ -200,7 +202,7 @@ a {
   color: var(--main-color);
   top: 30%;
   left: 50px;
-  text-shadow: 0 5px 15px rgba(0,0,0,0.9);
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1s ease, transform 1s ease;
@@ -209,10 +211,6 @@ a {
 .section1-text1.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-.section1-text1.text2 {
-  /* display: none; */
 }
 
 .section1-text-box h2 {
@@ -276,7 +274,7 @@ a {
   font-size: 1rem;
   z-index: 20;
   opacity: 0;
-  transition: all .8s ease;
+  transition: all 0.8s ease;
 }
 
 .section2-left .section2-text-box {
@@ -292,7 +290,7 @@ a {
 }
 
 .section2-text-box.right-text {
-  right: 60px;      
+  right: 60px;
   text-align: right;
 }
 
@@ -321,7 +319,7 @@ a {
 }
 
 .section2-list.right-list {
-  margin-left: auto;  
+  margin-left: auto;
 }
 
 .section2-list li a {
@@ -340,9 +338,9 @@ a {
   position: absolute;
   left: 0;
   bottom: -1px;
-  width: 0%;                 
+  width: 0%;
   height: 1.2px;
-  background-color: var(--main-color);  
+  background-color: var(--main-color);
   transition: all 0.9s ease;
 }
 
@@ -379,6 +377,85 @@ a {
 }
 
 .section3 {
-  background-image: url(img/section3-bg.png);
-  height: 100vh;
+  background: url(img/section3-bg.png) no-repeat center / cover;
+  position: relative;
+}
+
+.section3-wrap {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.section3-wrap h3 {
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+.section3-wrap span {
+  color: var(--point-color);
+}
+
+.section3-wrap p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+}
+
+.section3-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 3rem 2rem;
+}
+
+.section3-item div {
+  background-color: var(--main-color);
+}
+
+.section3-item a {
+  display: block;
+}
+
+.section3-item a:hover .item-img img {
+  transform: scale(1.5);
+}
+
+.item-img {
+  height: 15rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.item-img-wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease;
+  transform: scale(1);
+}
+
+.item-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item-icon img {
+  margin: 0 auto;
+  width: 3.5rem;
+}
+
+.item-icon h2 {
+  font-size: 1.2rem;
+}
+
+.item-icon p {
+  font-size: 0.8rem;
+  padding-bottom: 0.8rem;
 }
