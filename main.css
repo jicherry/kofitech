@@ -55,7 +55,7 @@ a {
 
 .header-item {
   width: 93%;
-  height: 5rem;
+  height: 6rem;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -64,8 +64,8 @@ a {
 
 .logo img {
   position: absolute;
-  top: 9%;
-  width: 6rem;
+  top: 8.5%;
+  width: 7.5rem;
   display: block;
 }
 
@@ -133,7 +133,7 @@ a {
   position: fixed;
   width: 100%;
   height: 100vh;
-  top: 5rem;
+  top: 6rem;
   background-color: var(--main-color);
   z-index: 1100;
   opacity: 0;
@@ -186,12 +186,12 @@ a {
   overflow: hidden;
 }
 
-.section-wrap {
+.section1-wrap {
   position: relative;
   height: 100%;
 }
 
-.section-wrap video {
+.section1-wrap video {
   position: absolute;
   inset: 0;
   object-fit: cover;
@@ -199,15 +199,23 @@ a {
   height: 100%;
 }
 
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
 .section1-text1 {
   position: absolute;
   color: var(--main-color);
   top: 30%;
-  left: 50px;
+  left: 60px;
   text-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1s ease, transform 1s ease;
+  z-index: 3;
 }
 
 .section1-text1.show {
