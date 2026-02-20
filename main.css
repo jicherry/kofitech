@@ -367,8 +367,9 @@ a {
   right: 0;
   background-color: var(--point-color);
   display: none;
-  width: 3.5rem;
+  width: 4.5rem;
   z-index: 10;
+  padding: 0.7rem;
 }
 
 .plus-btn.right-btn {
