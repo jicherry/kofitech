@@ -423,6 +423,7 @@ a {
   gap: 2rem;
   padding: 2rem 2rem;
   margin-top: 0.5rem;
+  padding-bottom: 6rem;
 }
 
 .section3-item div {
@@ -482,6 +483,10 @@ a {
 
 .section4 {
   height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .swiper {
@@ -490,12 +495,16 @@ a {
 
 .swiper-slide {
   position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .swiper-txtbox {
   width: 50rem;
   height: 20rem;
-  background-color: rgba(0, 0, 0, 0.63);
+  background-color: rgba(18, 18, 18, 0.63);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -522,11 +531,40 @@ a {
   cursor: pointer;
 }
 
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3.9rem;
+  height: 3.9rem;
+  background: #279cff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.nav i {
+  color: var(--main-color);
+  font-size: 2rem;
+}
+
+.prev {
+  left: 2rem;
+}
+
+.next {
+  right: 2rem;
+}
+
 /* section5 */
 
 .section5 {
   background: url(img/section5_bg.png) no-repeat center / cover;
   height: 70vh;
+  margin-top: 5.5rem;
 }
 
 .section5-wrap {
