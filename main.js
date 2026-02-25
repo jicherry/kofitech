@@ -71,24 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
   cycle();
 });
 
-//슬라이드
-const swiperMain = new Swiper(".swiper", {
-  loop: true,
-
-  pagination: {
-    el: ".swiper-pagination",
-  },
-
-  navigation: {
-    nextEl: ".next",
-    prevEl: ".prev",
-  },
-
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
-});
-
+//
 const bgImages = [
   "url(img/section4-bg1.png)",
   "url(img/section4-bg2.png)",
@@ -100,17 +83,26 @@ const section = document.querySelector(".section4");
 
 const swiper = new Swiper(".swiper", {
   loop: true,
+  loopedSlides: document.querySelectorAll(".swiper-slide").length,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  spaceBetween: 10,
+  speed: 300,
+
   navigation: {
     nextEl: ".next",
     prevEl: ".prev",
   },
-});
 
-/* 🔥 버튼 클릭할 때만 배경 변경 */
-document.querySelector(".next").addEventListener("click", () => {
-  section.style.backgroundImage = bgImages[swiper.realIndex];
-});
+  observer: true,
+  observeParents: true,
 
-document.querySelector(".prev").addEventListener("click", () => {
-  section.style.backgroundImage = bgImages[swiper.realIndex];
+  on: {
+    init: function () {
+      section.style.backgroundImage = bgImages[this.realIndex];
+    },
+    slideChangeTransitionEnd: function () {
+      section.style.backgroundImage = bgImages[this.realIndex];
+    },
+  },
 });
